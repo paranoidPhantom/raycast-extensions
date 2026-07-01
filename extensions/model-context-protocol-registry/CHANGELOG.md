@@ -1,5 +1,89 @@
 # Model Context Protocol Registry Changelog
 
+## [Add Jellypod MCP Server] - 2026-06-19
+
+Add official Jellypod MCP Server to registry for creating, editing, and publishing conversational AI podcasts (podcasts, hosts, sources, episodes, and analytics). Remote endpoint via mcp-remote.
+
+## [Add Olostep MCP Server] - 2026-06-16
+
+Add official Olostep MCP Server to registry for web data access — search, scrape, crawl, batch processing, and cited AI answers.
+
+## [Add OptionsAhoy MCP Server] - 2026-06-16
+
+Add community OptionsAhoy MCP Server to registry for equity-compensation tax optimization (ISO/AMT scheduling, NSO, RSU sell-vs-hold, QSBS eligibility, concentration risk, protective puts/collars) across federal plus 50-state and DC tax code. Remote endpoint via mcp-remote, no API key required.
+
+## [Add VC Deal Flow Signal MCP Server] - 2026-06-03
+
+Add community VC Deal Flow Signal MCP Server to registry for GitHub-derived engineering acceleration signals across ~400 venture-backed startups in 20 sectors (read-only, no API key).
+
+## [Add Alai MCP Server] - 2026-04-30
+
+Add community Alai MCP Server to registry for AI-powered presentation generation (text-to-slides, exports to PDF, PPTX, or shareable link).
+
+## [Add Sanity MCP Server] - 2026-03-07
+
+Add official Sanity MCP Server to registry for direct access to Sanity projects.
+
+## [Add RouteMesh MCP Server] - 2026-03-05
+
+Add official RouteMesh MCP Server to registry for multi-chain EVM RPC access with RouteMesh routing and failover.
+
+## [Add Razuna MCP Server] - 2026-02-03
+
+Add official Razuna MCP Server to registry.
+
+## [Update Anytype MCP Server] - 2026-01-13
+
+Update Anytype MCP Server to use the latest version of the Anytype API.
+
+## [Add Circleback MCP Server] - 2026-01-13
+
+Add official Circleback MCP Server to registry.
+
+## [Add Atono MCP Server] - 2025-12-08
+
+Add official Atono MCP Server to registry to manage projects
+
+## [Update Nuxt MCP Server URL] - 2025-11-17
+
+## [Update Nuxt UI MCP Server URL] - 2025-09-23
+
+## [Add Nuxt UI MCP Server] - 2025-09-10
+
+Add official Nuxt UI MCP Server to registry
+
+## [Add Rube MCP Server] - 2025-08-26
+
+Add official Rube MCP Server to registry to connect AI tools to 500+ apps
+
+## [Add Linear MCP Server] - 2025-08-11
+
+Add official Linear MCP Server to registry to manage projects
+
+## [Updated Apify] - 2025-08-04
+
+Updated Apify MCP server configuration from `APIFY_API_TOKEN` to `APIFY_TOKEN`
+
+## [Update Google Drive Homepage URL] - 2025-07-23
+
+Update Google Drive Homepage URL to the correct one.
+
+## [Add Gen-PDF MCP Server] - 2025-06-19
+
+Add Gen-PDF MCP server to let AI generate beautiful PDF documents.
+
+## [Add Keboola MCP Server] - 2025-06-17
+
+Add official Keboola MCP Server to registry - an open-source bridge between your Keboola project and modern AI tools. It turns Keboola features—like storage access, SQL transformations, and job triggers—into callable tools for Claude, Cursor, CrewAI, LangChain, Amazon Q, and more.
+
+## [Updated Prisma MCP Server URL] - 2025-06-05
+
+The Prisma MCP server URL was updated.
+
+## [Add Kagi Search MCP Server] - 2025-06-05
+
+Add official Kagi Search MCP Server to registry.
+
 ## [Add Anytype MCP Server] - 2025-05-30
 
 Add official Anytype MCP Server to registry.

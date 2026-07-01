@@ -9,11 +9,11 @@ import { MRListItem } from "./mr";
 import { useCachedState } from "@raycast/utils";
 import { GitLabIcons } from "../icons";
 
-function ReviewListEmptyView(): JSX.Element {
+function ReviewListEmptyView() {
   return <List.EmptyView title="No Reviews" icon={{ source: GitLabIcons.review, tintColor: Color.PrimaryText }} />;
 }
 
-export function ReviewList(): JSX.Element {
+export function ReviewList() {
   const [project, setProject] = useState<Project>();
   const { mrs, error, isLoading, performRefetch } = useMyReviews(project);
 
@@ -31,7 +31,7 @@ export function ReviewList(): JSX.Element {
     <List
       searchBarPlaceholder="Filter Reviews by name..."
       isLoading={isLoading}
-      searchBarAccessory={<MyProjectsDropdown onChange={setProject} />}
+      searchBarAccessory={<MyProjectsDropdown onChange={setProject} storeValue={true} />}
       isShowingDetail={getListDetailsPreference()}
     >
       {mrs?.map((mr) => (
@@ -50,7 +50,8 @@ export function ReviewList(): JSX.Element {
 
 export function useMyReviews(
   project?: Project | undefined,
-  labels: string[] | undefined = undefined
+  labels: string[] | undefined = undefined,
+  hideArchived = false,
 ): {
   mrs: MergeRequest[] | undefined;
   isLoading: boolean;
@@ -59,7 +60,7 @@ export function useMyReviews(
 } {
   const [mrs, setMrs] = useState<MergeRequest[]>();
   const { data, isLoading, error, performRefetch } = useCache<MergeRequest[] | undefined>(
-    `myreviews_${labels ? labels.join(",") : "[]"}`,
+    `myreviews_${labels ? labels.join(",") : "[]"}_${hideArchived}`,
     async (): Promise<MergeRequest[] | undefined> => {
       const user = await gitlab.getMyself();
       return await gitlab.getMergeRequests({
@@ -68,13 +69,14 @@ export function useMyReviews(
         in: "title",
         scope: "all",
         ...(labels && { labels }),
+        ...(hideArchived && { non_archived: true }),
       });
     },
     {
-      deps: [labels],
+      deps: [labels, hideArchived],
       secondsToRefetch: 5,
       secondsToInvalid: daysInSeconds(7),
-    }
+    },
   );
   useEffect(() => {
     const filtered = project ? data?.filter((m) => m.project_id === project?.id) : data;

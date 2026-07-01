@@ -1,5 +1,30 @@
 # Window Sizer Changelog
 
+## [Fixes] - 2026-06-09
+
+- Fixed list selection behavior while preserving selected item action icons
+- Added timeout handling for unresponsive window operations
+
+## [Chore] - 2026-05-16
+
+- Updated screenshots to new Raycast
+
+## [Chore] - 2025-09-30
+
+- Updated screenshots to macOS Tahoe
+
+## [Chore] - 2025-06-03
+
+- Fixed store page styling
+
+## [Chore] - 2025-06-03
+
+- Fixed store page styling
+
+## [Chore] - 2025-06-03
+
+- Fixed navigation title for the resize window command
+
 ## [Refactor Favorite Size Feature] - 2025-05-30
 
 - Refactored the logic for saving and resizing to the favorite window size

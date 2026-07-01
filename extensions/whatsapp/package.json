@@ -31,6 +31,14 @@
       "subtitle": "WhatsApp",
       "description": "Add existing WhatsApp groups to open them later",
       "mode": "view"
+    },
+    {
+      "name": "import-from-database",
+      "title": "Import Chats from Database",
+      "subtitle": "WhatsApp",
+      "description": "Import chats from the local WhatsApp database on macOS",
+      "mode": "view",
+      "platforms": ["macOS"]
     }
   ],
   "tools": [
@@ -138,6 +146,17 @@
     "Communication",
     "Productivity"
   ],
+  "preferences": [
+    {
+      "name": "defaultCountry",
+      "title": "Default Country",
+      "description": "ISO 3166-1 country code (e.g. IL, US, GB) used to parse local phone numbers without a + prefix. Leave empty to require full international format.",
+      "type": "textfield",
+      "required": false,
+      "default": "",
+      "placeholder": "IL"
+    }
+  ],
   "dependencies": {
     "@raycast/api": "^1.93.0",
     "@raycast/utils": "^1.19.0",
@@ -161,5 +180,9 @@
     "lint": "ray lint",
     "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
     "publish": "npx @raycast/api@latest publish"
-  }
+  },
+  "platforms": [
+    "macOS",
+    "Windows"
+  ]
 }
